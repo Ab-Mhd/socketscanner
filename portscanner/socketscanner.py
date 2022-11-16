@@ -13,6 +13,8 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.setdefaulttimeout(3)
 # defining static socket
 
+
+
 target_ip = input("[+] Please enter target ip\n")
 choice = int(input("[+] Would you like to scan using the first 1000(1) ports or specify one(2)?: [1/2]\n"))
 
