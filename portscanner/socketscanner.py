@@ -10,7 +10,7 @@ import socket
 # SOCK_STREAM used to define the protocol that the socket will use at the transport layer (TCP)
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
+socket.setdefaulttimeout(3)
 # defining static socket
 
 target_ip =input("[+] Please enter target ip\n")
@@ -25,6 +25,8 @@ def portscanner(port):
     else:
 
         print("Port", port, " is open")
+
+
 
 
 # function call
