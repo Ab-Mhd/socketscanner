@@ -13,8 +13,8 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # defining static socket
 
-target_ip = "192.168.2.33"
-target_port = 8888
+target_ip =input("[+] Please enter target ip\n")
+target_port = int(input("[+] Please enter target port\n"))
 
 
 # port scanner function declared
