@@ -13,8 +13,8 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.setdefaulttimeout(3)
 # defining static socket
 
-target_ip =input("[+] Please enter target ip\n")
-target_port = int(input("[+] Please enter target port\n"))
+target_ip = input("[+] Please enter target ip\n")
+choice = int(input("[+] Would you like to scan using the first 1000(1) ports or specify one(2)?: [1/2]\n"))
 
 
 # port scanner function declared
@@ -27,7 +27,11 @@ def portscanner(port):
         print("Port", port, " is open")
 
 
+# execution
 
-
-# function call
-portscanner(target_port)
+if choice == 1:
+    for port in range(1, 1000):
+        portscanner(port)
+else:
+    target_port = int(input("[+] Please enter target port\n"))
+    portscanner(target_port)
